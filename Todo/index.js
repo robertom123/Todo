@@ -38,6 +38,8 @@ function add(){
     list.appendChild(btn);
 
     main.appendChild(list);
+    
+    document.getElementById("add").value = "";
 
 }
 // take function allows to delete item
