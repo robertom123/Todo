@@ -1,4 +1,4 @@
-<<<<<<< HEAD:Todo/index.js
+
 var list = document.createElement("li");
 var span = document.createElement("span");
 var btn = document.createElement("button");
@@ -82,7 +82,7 @@ function filterlist(e){
 
 
 
-=======
+
 // setting up the event listeners 
 document.getElementById("btn1").addEventListener('click', add, false);
 document.getElementById("del"),addEventListener('click', take, false);
@@ -160,5 +160,5 @@ function filterlist(e){
 
 
 
->>>>>>> 0704461f5550c28d149510671f5a13893f429109:js/index.js
+
 }
