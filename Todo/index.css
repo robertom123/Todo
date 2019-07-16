@@ -31,6 +31,15 @@ border-radius for the border
 
 h1{
     text-align: center;
+    color: black;
+}
+
+#sBar {
+    font-size: 20px;
+}
+
+#search{
+    padding: 10px;
 }
 
 /*
@@ -46,6 +55,10 @@ input{
     color: white;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+}
+
+#adder{
+    font-size: 20px;
 }
 
 input:focus{
@@ -64,6 +77,12 @@ Same as anything else you style for buttons
     cursor: pointer;
     font-size: 15px;
 
+}
+
+
+/*empty input when adding item*/
+#info{
+    color: red;
 }
 
 /*ul stuff */
@@ -100,6 +119,7 @@ ul{
     text-decoration: line-through;
     text-decoration-color: black;
 }
+
 
 
 

@@ -2,59 +2,65 @@ var list = document.createElement("li");
 var span = document.createElement("span");
 var btn = document.createElement("button");
 var main = document.getElementById("main"); // this the ul 
+var info = document.getElementById("info");
 
 
 document.getElementById("btn1").addEventListener('click', add, false);
-document.getElementById("del"),addEventListener('click', take, false);
 document.getElementById("filter").addEventListener('keyup', filterlist, false);
 
 
 function add(){
-
-    var main = document.getElementById("main");
-
-    var list = document.createElement("li");
-
-    var input = document.createElement("input");
-    input.setAttribute("type", "checkbox");
-    input.className = "checker";
-
-    var span = document.createElement("span");
-    span.className = "items"
-
-    var btn = document.createElement("button");
-
-    // This className for span
-    // This classname for button  
-    // take off the li stuff 
-    // add checkbox with line through 
-    // add custom buttons 
-
-    var msg = document.getElementById("add").value;
-
-    span.textContent = msg;
-
-    list.appendChild(input);
-
-    list.appendChild(span);
-
-    btn.textContent = "X";
-    btn.className = "del";
-
-    list.appendChild(btn);
-
-    main.appendChild(list);
-
-}
-
-function take(e){
-    console.log(e.target);
-    if(e.target.className == "del"){
-        var li = e.target.parentElement;
-        main.removeChild(li);
-    }
     
+    var msg = document.getElementById("add").value;
+    if(msg === ''){
+        info.style.display = 'block';
+    }
+    else {
+        info.style.display = 'none';
+        var main = document.getElementById("main");
+        var list = document.createElement("li");
+        var input = document.createElement("input");
+
+        input.setAttribute("type", "checkbox");
+        input.className = "checker";
+
+        var span = document.createElement("span");
+        span.className = "items"
+
+        var btn = document.createElement("button");
+
+        // This className for span
+        // This classname for button  
+        // take off the li stuff 
+        // add checkbox with line through 
+        // add custom buttons 
+
+    
+
+        span.textContent = msg;
+
+        list.appendChild(input);
+
+        list.appendChild(span);
+        btn.setAttribute('id', 'dels');
+        btn.textContent = "X";
+        btn.className = "del";
+        btn.addEventListener('click', (e)=>{
+            console.log(e.target);
+            if(e.target.className == "del"){
+                var li = e.target.parentElement;
+                main.removeChild(li);
+            }
+        });
+
+        list.appendChild(btn);
+
+        main.appendChild(list);
+       document.getElementById('add').value = '';
+    }
+
 }
+
 
 //potential bug 
 function filterlist(e){
