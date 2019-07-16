@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Todo/index.css
 /*
 main width of the website 
 the height sets the page height
@@ -125,3 +126,112 @@ ul{
 
 
 
+=======
+/*
+main width of the website 
+the height sets the page height
+the overflow auto lets you scroll down after..
+the items reach the max height.
+use the background image with liner grad which allows usage of 2 colors 
+*/
+#wrapper{
+    max-width: 960px;
+    height: 936px;;
+    overflow: auto;
+    margin: auto;
+    border: 3px solid black;
+    background-image: linear-gradient(rgb(0, 225, 255), rgba(0, 0, 255, 0.623));
+   
+}
+
+/*
+centering the info based on the wrapper width 
+using the padding for inside the border 
+border-radius for the border 
+*/
+#box1{
+    max-width: 480px;
+    padding: 10px 10px 30px 10px;
+    border-radius: 25px;
+    border: 5px solid black;
+    margin: 10px auto 0 auto;
+    background-color: antiquewhite;
+}
+
+h1{
+    text-align: center;
+}
+
+/*
+this adds style to the input
+padding for inside the text box
+evertythiung here effects the inside 
+transition is for the animation
+*/
+input{
+    padding: 12px 20px;
+    background-color: #3CBC8D;
+    border: 3px solid #ccc;
+    color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+input:focus{
+    border: 3px solid #555;
+}
+
+/*
+Same as anything else you style for buttons
+*/
+#btn1{
+    margin: 5px;
+    padding: 12px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+
+}
+
+/*ul stuff */
+ul{
+    list-style-type: none;
+}
+
+/*span items*/
+.items{
+    font-size: 1.8em;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(41, 128, 241);
+}
+
+/*Delete button*/
+.del{
+    font-size: 1.2em;
+    background-color: red;
+    color: white;
+    border: none;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.del:hover{
+    background-color: purple;
+}
+
+/*CheckBox Line Through*/
+
+.checker:checked + span{
+    text-decoration: line-through;
+    text-decoration-color: black;
+}
+
+
+
+
+
+>>>>>>> 0704461f5550c28d149510671f5a13893f429109:css/main.css
